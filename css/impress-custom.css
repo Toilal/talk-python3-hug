@@ -1,0 +1,243 @@
+body {
+    background: #7ebc89;
+}
+
+.slide {
+    padding: 20px 40px;
+    background: #4D7EA8;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.align-center {
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    position: absolute;
+}
+
+.border {
+    padding: 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+
+.vertical-center {
+    padding: 12px;
+
+    position: absolute;
+    top:45%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.slide#title {
+    position: relative;
+}
+
+.slide#title .title {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.slide .footer-right {
+    position: absolute;
+
+    padding: 12px;
+
+    right: 0;
+    bottom: 0;
+}
+
+.slide .footer-left {
+    position: absolute;
+
+    padding: 12px;
+
+    left: 0;
+    bottom: 0;
+}
+
+.smaller {
+    font-size: 12px;
+}
+
+.small {
+    font-size: 16px;
+}
+
+.medium {
+    font-size: 18px;
+}
+
+.big {
+    font-size: 22px;
+}
+
+.bigger {
+    font-size: 28px;
+}
+
+code {
+    font-size: 18px;
+    font-family: "Monospace";
+
+}
+
+code.hljs {
+    background: #f0f3f5;
+
+    border: solid 2px #7ebc89;
+}
+
+code span.highlight {
+    font-weight: bold;
+    color: red;
+}
+
+code span.highlight span.hljs-string {
+    color: inherit;
+}
+
+span.out {
+    color: #800000;
+    font-weight: bold;
+}
+
+#impress .hljs-tag {
+    background: inherit;
+}
+
+.slide#title ul {
+    list-style: none;
+}
+
+ul {
+    list-style: disc;
+}
+
+li {
+    margin-left: 58px;
+    padding: 18px 4px 18px 4px;
+}
+
+.narrow > li {
+    padding: 9px 4px 9px 4px;
+}
+
+.narrower > li {
+    padding: 0px 4px 0px 4px;
+}
+
+.zen-of-python {
+    font-size: 28px;
+}
+
+#impress .hljs {
+    padding-top: 8px;
+    padding-bottom: 18px;
+}
+
+.lang {
+    padding-left: 0.75em;
+    font-weight: bolder;
+
+    color: white;
+    font-style: oblique;
+
+    font-size: 16px;
+}
+
+small {
+    font-size: 14px;
+}
+
+/* blockquote */
+blockquote{
+    display:block;
+    background: #fff;
+    padding: 15px 20px 15px 65px;
+    margin: 0 0 20px;
+    position: relative;
+
+    /*Font*/
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+
+    /*Borders - (Optional)*/
+    border-left: 25px solid #3d8048;
+    border-right: 5px solid #3d8048;
+
+    /*Box Shadow - (Optional)*/
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 90px;
+    font-weight: bold;
+    color: #999;
+
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+}
+
+blockquote::after{
+    /*Reset to make sure*/
+    content: "";
+}
+
+blockquote a{
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+}
+
+blockquote a:hover{
+    color: #666;
+}
+
+blockquote em{
+    font-style: italic;
+}
+
+

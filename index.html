@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>hug | Réaliser une API avec Python 3 | Rémi Alvergnat @Toilal</title>
+
+    <meta name="author" content="Rémi Alvergnat" />
+
+    <link href="css/font-custom.css" rel="stylesheet" />
+
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/impress.css" rel="stylesheet" />
+    <link href="css/impress-progress.css" rel="stylesheet" />
+    <link href="css/impress-custom.css" rel="stylesheet" />
+    <link href="css/highlight/idea.css" rel="stylesheet">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported" ng-app="Examples">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="progressbar"><div></div></div>
+<div class="progress"></div>
+
+<div id="impress">
+
+    <div id="overview-start" class="step" data-x="0" data-y="2300" data-scale="12">
+    </div>
+
+    <div id="title" class="step slide" data-x="0" data-y="0" data-scale="6">
+        <img class="title" src="img/hug.png">
+        <h1 class="subtitle vertical-center">Réaliser une API avec Python 3</h1>
+
+        <div class="footer-left">
+            <ul>
+                <li><i class="fa fa-user"></i> Rémi Alvergnat</li>
+                <li><i class="fa fa-users"></i> Orléans Tech Talk</a></li>
+                <li><i class="fa fa-calendar"></i> 29/03/2016</li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><i class="fa fa-twitter"></i> <a href="https://twitter.com/Toilal">@Toilal</a></li>
+                <li><i class="fa fa-github"></i> <a href="https://github.com/Toilal">Toilal</a></li>
+                <li><i class="fa fa-linkedin"></i> <a href="https://fr.linkedin.com/in/remialvergnat">remi.alvergnat</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="python-langage" class="step slide" data-x="-1500" data-y="3000" data-rotate-y="-15" data-rotate-z="-7.5">
+        <h1 class="title">Python</h1>
+        <ul>
+            <li>Orienté objet</li>
+            <li>Typage dynamique fort</li>
+            <li>Multiplateforme</li>
+            <li>Syntaxe concise et lisible</li>
+            <li>Fait ses preuves depuis 1991</li>
+            <li>Très polyvalent</li>
+            <li>Nombreux modules par défaut</li>
+            <li>5ème langage sur Tiobe (devant PHP et JavaScript)</li>
+        </ul>
+    </div>
+
+    <div id="python-2-3" class="step slide" data-x="-500" data-y="3000" data-rotate-y="-5" data-rotate-z="-2.5">
+        <h1 class="title">Python 2 et Python 3</h1>
+        <ul>
+            <li>2 versions sont supportées</li>
+            <li>Le code écrit avec Python 2 nécessite des adaptations</li>
+            <li>Il est possible d'écrire un même code pour les 2 versions</li>
+            <li>A scindé la communauté pendant des années</li>
+            <li>Python 3 est maintenant adopté par défaut</li>
+            <li>Certains projets ne supportent plus Python 2</li>
+        </ul>
+    </div>
+
+    <div id="python-librairies-frameworks" class="step slide" data-x="500" data-y="3000" data-rotate-y="5" data-rotate-z="2.5">
+        <h1 class="title">Librairies et Frameworks</h1>
+        <ul>
+            <li>Numpy (Calcul Scientifique)</li>
+            <li>IPython (REPL - Read Eval Print Loop)</li>
+            <li>Jupyter Notebook (Equations et graphiques interactifs)</li>
+            <li>Django (Framework Web MVC)</li>
+            <li>Flask (Microframework Web)</li>
+            <li>Tornado (Microframework Web Asynchrone)</li>
+            <li>Falcon (Microframework Web en Cython)</li>
+        </ul>
+    </div>
+
+    <div id="python-zen" class="step slide" data-x="1500" data-y="3000" data-rotate-y="15" data-rotate-z="7.5">
+        <h1>The Zen of Python, by Tim Peters</h1>
+
+        <h2>19 principes pour expliquer la philosophie du langage</h2>
+
+        <pre><code># Easter egg plein de bon sens !
+import this</code></pre>
+
+        <ul class="narrower zen-of-python">
+            <li>Beautiful is better than ugly.</li>
+            <li>Explicit is better than implicit.</li>
+            <li>Readability counts.</li>
+            <li>Errors should never pass silently.</li>
+            <li>Unless explicitly silenced.</li>
+            <li>There should be one-- and preferably only one --obvious way to do it.</li>
+            <li>Now is better than never.</li>
+            <li>Although never is often better than <i>right</i> now.</li>
+            <li>If the implementation is hard to explain, it's a bad idea.</li>
+            <li>If the implementation is easy to explain, it may be a good idea.</li>
+        </ul>
+    </div>
+
+    <div id="python-hello-world" class="step slide" data-x="-4500" data-y="3800" data-rotate-y="-45" data-rotate-z="-22.5">
+        <h1 class="title">Hello World</h1>
+        <div class="lang">hello_world.py</div>
+        <pre><code class="python bigger">print("Hello World!")</code></pre>
+        <br/>
+
+        <div class="lang">bash</div>
+        <pre><code class="bash bigger">$ python3 hello_world.py</code></pre>
+        <br/>
+    </div>
+
+    <div id="python-fonctions-objects" class="step slide" data-x="-3500" data-y="3800" data-rotate-y="-35" data-rotate-z="-17.5">
+        <h1 class="title">Les fonctions sont des objets</h1>
+
+        <pre><code class="python bigger">def my_function():
+    &quot;&quot;&quot;
+    Some function docstring.
+    &quot;&quot;&quot;
+    print(&quot;my_function&quot;)
+
+print(my_function)
+<span class="out">(out)</span> &lt;function my_function at 0x7fa904ea7620&gt;</code></pre>
+    </div>
+
+    <div id="python-classes-objects" class="step slide" data-x="-2500" data-y="3800" data-rotate-y="-25" data-rotate-z="-12.5">
+        <h1 class="title">Les classes sont des objets</h1>
+
+        <pre><code class="python bigger">class MyClass:
+    &quot;&quot;&quot;
+    Some class docstring.
+    &quot;&quot;&quot;
+    def __init__(self, value):
+        self.value = value
+
+    def move(self):
+        &quot;&quot;&quot;
+        Some method docstring.
+        &quot;&quot;&quot;
+        print(&quot;Moving %s ...&quot; % self.value)
+
+print(MyClass)
+<span class="out">(out)</span> &lt;class '__main__.MyClass'&gt;</code></pre>
+    </div>
+
+    <div id="python-classes-modifiables" class="step slide" data-x="-1500" data-y="3800" data-rotate-y="-15" data-rotate-z="-7.5">
+        <h1 class="title">Les classes sont modifiables</h1>
+
+        <pre><code class="python bigger"># On crée une instance de MyClass
+my_instance = MyClass(42)
+
+# On appelle la méthode move
+my_instance.move()
+<span class="out">(out)</span> Moving 42 ... # Tout va bien
+
+# On défini une fonction jump
+def jump(self):
+    print("Jumping %s ..." % self.value)
+
+# On redéfini la méthode move
+MyClass.move = jump
+
+# Et on appelle move
+my_instance.move()
+<span class="out">(out)</span> Jumping 42 ... # Suprise !</code></pre>
+    </div>
+
+    <div id="python-inspect" class="step slide" data-x="-500" data-y="3800" data-rotate-y="-5" data-rotate-z="-2.5">
+        <h1 class="title">L'introspection</h1>
+
+        <pre><code class="python big">import inspect
+
+def maximum(arg1, arg2):
+    """
+    Return the maximum value.
+    """
+    return arg2 if arg2 > arg1 else arg1
+
+# On récupère la signature
+inspect.signature(maximum)
+<span class="out">(out)</span> &lt;Signature (arg1, arg2)&gt;
+
+# la docstring
+inspect.getdoc(maximum)
+<span class="out">(out)</span> Return the maximum value.
+
+# et même les sources !
+inspect.getsource(maximum)
+<span class="out">(out)</span> def maximum(arg1, arg2):\n        """\n        Return the maximum value.\n        """\n        return arg2 if arg2 > arg1 else arg1\n</code></pre>
+    </div>
+
+    <div id="python-objets-dynamiques" class="step slide" data-x="500" data-y="3800" data-rotate-y="5" data-rotate-z="2.5">
+        <h1 class="title">Les objets dynamiques</h1>
+
+        <pre><code class="python big">class Class42:
+    def __init__(self):
+        self._data = {}
+
+    def __setattr__(self, key, value):
+        if key == &quot;_data&quot;:
+            super().__setattr__(key, value)
+        else:
+            self._data[key] = value * 42
+
+    def __getattr__(self, item):
+        return self._data.get(item)
+
+    @property
+    def total(self):
+        return sum(self._data.values())
+
+o = Class42()
+o.first = 1
+o.second = 2
+print(&quot;o: (%s, %s, %s)&quot; % (o.first, o.second, o.total))
+<span class="out">(out)</span> o: (42, 84, 126)</code></pre>
+    </div>
+
+
+    <div id="python-callable" class="step slide" data-x="1500" data-y="3800" data-rotate-y="15" data-rotate-z="7.5">
+        <h1 class="title">Les callables</h1>
+        <h2>Tout peut devenir <i>fonction</i></h2>
+
+        <pre><code class="python big">class ClassCallable:
+    def __call__(self, *args, **kwargs):
+        print(&quot;args: %s; kwargs: %s; &quot; % (args, kwargs))
+
+callable = ClassCallable()
+callable(1, 2, arg3=3, arg4=4)
+<span class="out">(out)</span> args: (1, 2); kwargs: {'arg4': 4, 'arg3': 3};</code></pre>
+    </div>
+
+    <div id="python-decorateurs-fonctions" class="step slide" data-x="2500" data-y="3800" data-rotate-y="25" data-rotate-z="12.5">
+        <h1 class="title">Les <strike>annotations</strike> décorateurs</h1>
+
+        <pre><code class="python bigger">def double_first(func):
+    def double_func(a, b):
+        return func(a*2, b)
+    return double_func
+
+
+@double_first
+def decorated_sum(a, b):
+    return a + b
+# decorated_sum = double_first(decorated_sum)
+
+print(decorated_sum(3, 4))
+<span class="out">(out)</span> 10</code></pre>
+    </div>
+
+    <div id="python-decorateurs-classes" class="step slide" data-x="3500" data-y="3800" data-rotate-y="35" data-rotate-z="17.5">
+        <h1 class="title">Les <strike>annotations</strike> décorateurs</h1>
+
+        <pre><code class="python big">class add_second:
+    def __init__(self, value):
+        self.value = value
+
+    def __call__(self, func):
+        def add_func(a, b):
+            return func(a, b + self.value)
+        return add_func
+
+
+@double_first
+@add_second(2)
+def decorated_product(a, b):
+    return a * b
+# decorated_sum = add_second(2)(double_first(decorated_sum))
+
+print(decorated_product(2, 3))
+<span class="out">(out)</span> 20</code></pre>
+    </div>
+
+    <div id="python-type-hints"class="step slide" data-x="4500" data-y="3800" data-rotate-y="45" data-rotate-z="22.5">
+        <h1>Type Hints (Python 3.5)</h1>
+
+        <pre><code class="python">from typing import Dict
+
+# Let's pass in a dictionary
+def greeting(names: <span class="highlight">Dict[str, int]</span>) <span class="highlight">-&gt; str</span>:
+    keys = names.keys()
+    print('Hello, {}'.format(', '.join(keys)))
+
+greeting({'jane': 10, 'john': 11, 'judy': 12})</code></pre>
+
+        <ul class="narrow">
+            <li>Du typage dans Python ? Oui mais 100% <strong>optionnel</strong> !</li>
+            <li>Uniquement des <strong>indications</strong> de types</li>
+            <li>Sur les paramètres et retour de fonction</li>
+            <li>Lues par les outils de développement (contrôle d'erreur)</li>
+            <li>Disponibles par <strong>introspection</strong> (validation à l'execution)</li>
+            <li>N'influe pas l'execution normale du code</li>
+            <li>Module typing intégrant Optional, Union, List, Dict, etc ...</li>
+        </ul>
+    </div>
+
+
+    <div id="python-magie"class="step slide" data-x="-1500" data-y="4600" data-rotate-y="-15" data-rotate-z="-7.5">
+        <h1>Python est idéal pour implémenter de la magie</h1>
+
+        <ul>
+            <li>Fonctions et classes modifiables</li>
+            <li>Décorateurs (~ AOP)</li>
+            <li>Objets dynamiques et proxies</li>
+            <li>Introspection complète (documentation & type hints)</li>
+        </ul>
+    </div>
+
+    <div id="hug-exploite-python-3" class="step slide" data-x="-500" data-y="4600" data-rotate-y="-5" data-rotate-z="-2.5">
+        <h1>hug exploite python 3</h1>
+        <h2>Pour implémenter et documenter une API</h2>
+
+        <pre><code class="python">&quot;&quot;&quot;First hug API (local, command-line, and HTTP access)&quot;&quot;&quot;
+import hug
+
+
+@hug.cli()
+@hug.get(examples='name=Timothy&amp;age=26')
+@hug.local()
+def happy_birthday(name: hug.types.text,
+                   age: hug.types.number,
+                   hug_timer=3):
+    &quot;&quot;&quot;Says happy birthday to a user&quot;&quot;&quot;
+    return {'message': 'Happy %s Birthday %s!' % (age, name)}
+
+
+if __name__ == '__main__':
+    happy_birthday.interface.cli()</code></pre>
+    </div>
+
+    <div id="api-c-est-quoi" class="step slide" data-x="500" data-y="4600"  data-rotate-y="5" data-rotate-z="2.5">
+        <h1>Mais une API, c'est quoi ?</h1>
+        <h2>Application Programming Interface</h2>
+
+        <div class="lang">wikipedia</div>
+        <blockquote>ensemble normalisé de classes, de méthodes ou de fonctions qui sert de façade par laquelle un logiciel offre des services à d'autres logiciels</blockquote>
+
+        <h2>Pas de protocole particulier !</h2>
+    </div>
+
+    <div id="hug-permet" class="step slide" data-x="1500" data-y="4600" data-rotate-y="15" data-rotate-z="7.5">
+        <h1>hug permet d'écrire une API</h1>
+        <ul>
+            <li>Le plus simplement possible</li>
+            <li>Documentée par le code</li>
+            <li>Intégrant la validation des données</li>
+            <li>Supportant les évolutions de version</li>
+        </ul>
+    </div>
+
+    <div id="hug-performance" class="step slide" data-x="2500" data-y="4600" data-rotate-y="25" data-rotate-z="12.5">
+        <h1>hug est performant</h1>
+
+        <h2>Benchmark Pycnic</h2>
+
+        <ul class="narrow">
+            <li>Router '/json' vers une méthode</li>
+            <li>Encoder le résultat de '/json' en JSON</li>
+            <li>Retourner le JSON dans le body de la réponse avec "Content-Type: application/json"</li>
+        </ul>
+
+        <img class="align-center" src="img/pycnic-bench.png">
+    </div>
+
+    <div id="hug-getting-started" class="step slide" data-x="-2500" data-y="5400" data-rotate-y="-25" data-rotate-z="-12.5">
+        <h1>Getting started</h1>
+
+        <h2>1 seul code => 3 cibles</h2>
+
+        <div class="lang">getting_started.py</div>
+        <pre><code class="python">&quot;&quot;&quot;First hug API (local, command-line, and HTTP access)&quot;&quot;&quot;
+import hug
+
+
+@hug.get(examples='name=Hug&amp;age=1')
+@hug.cli()
+@hug.local()
+def happy_birthday(name: hug.types.text, age: hug.types.number, \
+                   timer: hug.directives.Timer=-1):
+    &quot;&quot;&quot;Says happy birthday to a user&quot;&quot;&quot;
+    return {'message': 'Happy {0} Birthday {1}!'.format(age, name),
+            'took': float(timer)}</code></pre>
+    </div>
+
+    <div id="hug-versioning" class="step slide" data-x="-1500" data-y="5400" data-rotate-y="-15" data-rotate-z="-7.5">
+        <h1>Versioning</h1>
+
+        <h2>Plusieurs versions dans la même application</h2>
+
+        <div class="lang">versioning.py</div>
+        <pre><code class="python">import hug
+
+@hug.get('/echo', versions=1)
+def echo(text):
+    return text
+
+@hug.get('/echo', versions=range(2, 5))
+def echo(text):
+    return 'Echo: {text}'.format(**locals())
+
+@hug.get('/unversioned')
+def hello():
+    return 'Hello world!'</code></pre>
+    </div>
+
+    <div id="hug-types-validation" class="step slide" data-x="-500" data-y="5400" data-rotate-y="-5" data-rotate-z="-2.5">
+        <h1>Type Annotations & Validation</h1>
+
+        <h2>Les données sont automatiquement validées</h2>
+
+        <div class="lang">validation.py</div>
+        <pre><code class="python">import datetime as dt
+
+import hug
+from marshmallow import fields
+from marshmallow.validate import Range, OneOf
+
+@hug.get('/dateadd', examples=&quot;value=1973-04-10&amp;addend=63&quot;)
+def dateadd(value: fields.DateTime(),
+            addend: fields.Int(validate=Range(min=1)),
+            unit: fields.Str(validate=OneOf(['minutes', 'days']))='days'):
+    &quot;&quot;&quot;Add a value to a date.&quot;&quot;&quot;
+    value = value or dt.datetime.utcnow()
+    if unit == 'minutes':
+        delta = dt.timedelta(minutes=addend)
+    else:
+        delta = dt.timedelta(days=addend)
+        result = value + delta
+    return {'result': result}</code></pre>
+    </div>
+
+    <div id="hug-directives" class="step slide" data-x="500" data-y="5400" data-rotate-y="5" data-rotate-z="2.5">
+        <h1>Directives</h1>
+
+        <pre><code class="python">import hug
+
+@hug.directive()
+def basic(default='hi', **kwargs):
+    return default + ' there!'
+
+@hug.local()
+def english(greeting: basic='hello'):
+    return greeting
+
+@hug.local()
+def american(greeting: basic):
+    return greeting
+
+assert english() == 'hello there!'
+assert american() == 'hi there!'
+assert english('OMG!') == 'OMG!'</code></pre>
+    </div>
+
+    <div id="hug-output-formatters" class="step slide" data-x="1500" data-y="5400" data-rotate-y="15" data-rotate-z="7.5">
+        <h1>Output & Input Formatters</h1>
+
+        <div class="lang">output_image.py</div>
+        <pre><code class="python">import hug
+
+@hug.get('/image.png', output=hug.output_format.png_image)
+def image():
+    &quot;&quot;&quot;Serves up a PNG image.&quot;&quot;&quot;
+    return '../logo.png'</code></pre>
+        <div class="lang">output_pil.py</div>
+        <pre><code class="python">import hug
+from PIL import Image, ImageDraw
+
+@hug.get('/image.png', output=hug.output_format.png_image)
+def create_image():
+    image = Image.new('RGB', (100, 50)) # create the image
+    ImageDraw.Draw(image).text((10, 10), 'Hello World!', fill=(255, 0, 0))
+    return image
+    # voir duck-typing</code></pre>
+        <div class="lang">output_video.py</div>
+        <pre><code class="python">import hug
+
+@hug.get(output=hug.output_format.mp4_video)
+def watch():
+    &quot;&quot;&quot;Watch an example movie, streamed directly to you from hug&quot;&quot;&quot;
+    return 'movie.mp4'</code></pre>
+    </div>
+
+    <div id="hug-authentication" class="step slide" data-x="2500" data-y="5400" data-rotate-y="25" data-rotate-z="12.5">
+        <h1>Authentification</h1>
+
+        <pre><code class="python">import hug
+
+verify = hug.authentication.verify('User1', 'mypassword')
+authentication = hug.authentication.basic(verify)
+
+@hug.get('/authenticated', requires=authentication)
+def basic_auth_api_call(user: hug.directives.user):
+    return 'Successfully authenticated with user: {0}'.format(user)</code></pre>
+    </div>
+
+    <div id="hug-avantages-limites" class="step slide" data-y="6200">
+        <h1>Points forts</h1>
+
+        <ul class="narrow">
+            <li>Bonnes performances (Falcon / Cython)</li>
+            <li>Lisibilité du code (Décorateurs, Conventions)</li>
+            <li>Documentation automatisée par le code</li>
+            <li>Facile à comprendre et étendre</li>
+        </ul>
+
+        <h1>Limites</h1>
+
+        <ul class="narrow">
+            <li>Framework jeune</li>
+            <li>Documentation non standard (OpenAPI/Swagger prévue)</li>
+            <li>Header "Accept" inexploité</li>
+        </ul>
+    </div>
+
+    <div id="overview-end" class="step" data-x="0" data-y="2300" data-scale="12">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+</script>
+
+<script src="js/impress-progress.js"></script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
